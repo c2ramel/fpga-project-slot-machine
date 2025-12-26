@@ -31,7 +31,7 @@ This project is organized to keep source code separate from Quartus compilation 
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [https://github.com/YOUR_USERNAME/FPGA_Slot_Machine.git](https://github.com/c2ramel/fpga-project-slot-machine.git)
+    git clone [https://github.com/c2ramel/fpga-project-slot-machine.git]
     ```
 2.  **Open in Quartus:**
     * Navigate to the `quartus_project/` folder.
@@ -60,4 +60,5 @@ If you need to verify or change pin mappings, the full list is available in `doc
 
 ---
 *Created for the Digital Integrated Circuit Design Final Project.*
+
 
