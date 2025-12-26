@@ -1,29 +1,62 @@
 # FPGA Virtual Reel Slot Machine 🎰
 
-This project implements a fully functional digital slot machine on the **Terasic DE10-Lite (Altera MAX 10)** FPGA board. It uses a "Virtual Reel" architecture to simulate a casino-style experience with instantaneous result calculation.
+This project implements a fully functional digital slot machine on the **Terasic DE10-Lite (Altera MAX 10)** FPGA board. It features a "Virtual Reel" architecture that simulates modern casino gaming logic with instantaneous result calculation, adjustable betting, and a dot-matrix animation system.
 
-## Features
-* **Virtual Reel Logic:** Results are calculated instantly upon spin press, simulating modern casino algorithms.
-* **Visuals:** 8x16 LED Dot Matrix display with scrolling animation (using two 8x8 matrices).
-* **Betting System:** Adjustable bets (1-8 credits) via switches.
-* **Cheat Mode:** A hidden switch (`SW[0]`) forces a win for demonstrations.
-* **Scoreboard:** 7-Segment displays track Credits and Win Amounts.
+## 📂 Repository Structure
 
-## Hardware Requirements
-* **Board:** Terasic DE10-Lite (MAX 10 10M50DAF484C7G).
-* **Display:** 2x LED Dot Matrix (8x8) chained together.
-* **Inputs:** On-board Switches and Buttons.
+This project is organized to keep source code separate from Quartus compilation artifacts:
 
-## File Structure
-* `src/`: Contains all Verilog source code modules.
-* `docs/`: Contains the detailed Project Report and Pin Assignments.
+* **`src/`**: Contains all human-written Verilog source code modules (`.v` files).
+* **`quartus_project/`**: Contains the Quartus Prime project files (`.qpf`, `.qsf`). **Open the project from here.**
+* **`docs/`**: Documentation, pin assignment lists, and the project report.
 
-## How to Run
-1.  Open Quartus Prime and create a new project targeting the **MAX 10 10M50DAF484C7G**.
-2.  Add all files from the `src/` folder to the project.
-3.  Import the pin assignments from `docs/pin_assignment_updated.txt`.
-4.  Compile and upload to the DE10-Lite board.
-5.  **Controls:**
-    * **KEY[1]:** Reset Game.
-    * **SW[3:1]:** Set Bet Amount.
-    * **KEY[0]:** Spin / Stop.
+## ✨ Features
+
+* **Virtual Reel Logic:** Results are calculated instantly upon pressing spin, decoupling the math from the animation.
+* **Visuals:** 8x16 LED Dot Matrix display (using two 8x8 matrices) with smooth scrolling.
+* **Betting System:** Adjustable bets (1-8 credits) via binary switch input.
+* **Cheat Mode:** A hidden switch (`SW[0]`) forces a winning combination for demonstrations.
+* **Scoreboard:** 6-digit 7-Segment display tracking current Credits and Win Amounts.
+
+## 🛠️ Hardware Requirements
+
+* **FPGA Board:** Terasic DE10-Lite (MAX 10 10M50DAF484C7G).
+* **Display:** 2x LED Dot Matrix (8x8) modules, daisy-chained or wired to form an 8x16 grid.
+* **Connections:**
+    * **DOT_ROW:** Connected to GPIO pins (Active Low).
+    * **DOT_COL_0 (Right):** Connected to GPIO pins (Active High).
+    * **DOT_COL_1 (Left):** Connected to GPIO pins (Active High).
+
+## 🚀 How to Run (Plug-and-Play)
+
+1.  **Clone the Repository:**
+    ```bash
+    git clone [https://github.com/YOUR_USERNAME/FPGA_Slot_Machine.git](https://github.com/YOUR_USERNAME/FPGA_Slot_Machine.git)
+    ```
+2.  **Open in Quartus:**
+    * Navigate to the `quartus_project/` folder.
+    * Double-click `Slot_Machine.qpf` to open the project in Quartus Prime.
+    * *Note: The project is configured to use relative paths, so it will automatically find the source code in `../src/`.*
+3.  **Compile:**
+    * Click **Start Compilation** in Quartus.
+    * *Note: This will generate the necessary `db` and `output_files` folders locally on your machine.*
+4.  **Upload:**
+    * Connect your DE10-Lite board via USB.
+    * Open the **Programmer** tool.
+    * Select the generated `.sof` file (usually in `output_files/`) and click **Start**.
+
+## 🎮 Controls
+
+| Component | Input | Function |
+| :--- | :--- | :--- |
+| **KEY[0]** | Button | **Spin / Stop:** Press to bet & spin; press again to stop reels. |
+| **KEY[1]** | Button | **Reset:** Resets game credits to 100. |
+| **SW[3:1]** | Switches | **Bet Amount:** Binary 0-7 (Result is Bet + 1). |
+| **SW[0]** | Switch | **Cheat Mode:** `0` = Fair Game, `1` = Guaranteed Win. |
+
+## 📜 Pin Assignments
+
+If you need to verify or change pin mappings, the full list is available in `docs/pin_assignment_updated.txt`. The project is pre-configured for the standard DE10-Lite GPIO header layout used in `Lab 10`.
+
+---
+*Created for the Digital Integrated Circuit Design Final Project.*
