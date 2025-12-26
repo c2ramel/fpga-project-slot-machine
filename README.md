@@ -31,11 +31,11 @@ This project is organized to keep source code separate from Quartus compilation 
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [https://github.com/YOUR_USERNAME/FPGA_Slot_Machine.git](https://github.com/YOUR_USERNAME/FPGA_Slot_Machine.git)
+    git clone [https://github.com/YOUR_USERNAME/FPGA_Slot_Machine.git](https://github.com/c2ramel/fpga-project-slot-machine.git)
     ```
 2.  **Open in Quartus:**
     * Navigate to the `quartus_project/` folder.
-    * Double-click `Slot_Machine.qpf` to open the project in Quartus Prime.
+    * Double-click `Final_Project_Slot_Machine.qpf` to open the project in Quartus Prime.
     * *Note: The project is configured to use relative paths, so it will automatically find the source code in `../src/`.*
 3.  **Compile:**
     * Click **Start Compilation** in Quartus.
@@ -60,3 +60,4 @@ If you need to verify or change pin mappings, the full list is available in `doc
 
 ---
 *Created for the Digital Integrated Circuit Design Final Project.*
+
