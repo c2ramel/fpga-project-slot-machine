@@ -1,0 +1,8 @@
+
+State Machine - |Final_Project_Slot_Machine|FSM:game_logic|state
+Name state.STOPPING_2 state.STOPPING_1 state.SPINNING state.IDLE state.RESULT 
+state.IDLE 0 0 0 0 0 
+state.SPINNING 0 0 1 1 0 
+state.STOPPING_1 0 1 0 1 0 
+state.STOPPING_2 1 0 0 1 0 
+state.RESULT 0 0 0 1 1 
