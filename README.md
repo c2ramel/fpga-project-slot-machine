@@ -12,10 +12,12 @@ This project is organized to keep source code separate from Quartus compilation 
 
 ## ✨ Features
 
+* **True Randomness:** Utilizes a 16-bit Linear Feedback Shift Register (LFSR) to ensure statistically independent, non-deterministic results.
+* **Synchronous Architecture:** Built using robust Clock Enable logic (no ripple clocks), ensuring timing stability and glitch-free operation on the 50MHz master clock.
+* **Visuals:** 8x16 LED Dot Matrix display with smooth "slide-to-stop" animation logic.
 * **Virtual Reel Logic:** Results are calculated instantly upon pressing spin, decoupling the math from the animation.
-* **Visuals:** 8x16 LED Dot Matrix display (using two 8x8 matrices) with smooth scrolling.
 * **Betting System:** Adjustable bets (1-8 credits) via binary switch input.
-* **Cheat Mode:** A hidden switch (`SW[0]`) forces a winning combination for demonstrations.
+* **Cheat Mode:** A hidden switch (`SW[0]`) overrides the LFSR to force a winning combination for demonstrations.
 * **Scoreboard:** 6-digit 7-Segment display tracking current Credits and Win Amounts.
 
 ## 🛠️ Hardware Requirements
@@ -60,6 +62,7 @@ If you need to verify or change pin mappings, the full list is available in `doc
 
 ---
 *Created for the Digital Integrated Circuit Design Final Project.*
+
 
 
 
