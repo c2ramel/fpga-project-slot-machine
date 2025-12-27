@@ -14,8 +14,8 @@ module Final_Project_Slot_Machine (
     output [7:0] DOT_COL_1
 );
 
-    wire clk_1khz;
-    wire clk_15hz;
+    wire tick_1khz;
+    wire tick_15hz;
     wire [1:0] rng_1;
     wire [1:0] rng_2;
     wire [1:0] rng_3;
@@ -33,8 +33,8 @@ module Final_Project_Slot_Machine (
     Frequency_Divider fd (
         .clk(MAX10_CLK1_50),
         .rst(KEY[1]),
-        .clk_1khz(clk_1khz),
-        .clk_15hz(clk_15hz)
+        .tick_1khz(tick_1khz), // Now outputs enable pulses
+        .tick_15hz(tick_15hz)
     );
 
     Random_Number_Generator rng (
@@ -47,7 +47,8 @@ module Final_Project_Slot_Machine (
     );
 
     FSM game_logic (
-        .clk_game(clk_15hz),
+        .clk(MAX10_CLK1_50),    // Main Clock
+        .tick_game(tick_15hz),  // Game Speed Enable
         .rst(KEY[1]),
         .btn_spin(KEY[0]),
         .bet_sw(SW[3:1]),
@@ -63,7 +64,8 @@ module Final_Project_Slot_Machine (
     );
 
     Dot_Matrix_Display display (
-        .clk_1khz(clk_1khz),
+        .clk(MAX10_CLK1_50),   // Main Clock
+        .tick_1khz(tick_1khz), // Scan Speed Enable
         .rst(KEY[1]),
         .s1(disp_1),
         .s2(disp_2),
