@@ -61,7 +61,8 @@ This project is organized to keep source code separate from Quartus compilation 
 If you need to verify or change pin mappings, the full list is available in `docs/pin_assignment_updated.txt`. The project is pre-configured for the standard DE10-Lite GPIO header layout used in `Lab 10`.
 
 ---
-*Created for the Digital Integrated Circuit Design Final Project.*
+*Created for the Digital Integrated Circuit Design Final Project by Google's Gemini AI.*
+
 
 
 
