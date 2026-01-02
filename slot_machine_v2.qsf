@@ -1,0 +1,180 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2021  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+# Date created = 13:52:57  January 02, 2026
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		slot_machine_v2_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Intel recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "MAX 10"
+set_global_assignment -name DEVICE 10M50DAF484C7G
+set_global_assignment -name TOP_LEVEL_ENTITY slot_machine_v2
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 21.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:52:57  JANUARY 02, 2026"
+set_global_assignment -name LAST_QUARTUS_VERSION "21.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name EDA_SIMULATION_TOOL "Questa Intel FPGA (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_P11 -to MAX10_CLK1_50
+set_location_assignment PIN_B8 -to KEY0
+set_location_assignment PIN_A7 -to KEY1
+set_location_assignment PIN_C10 -to SW0
+set_location_assignment PIN_C11 -to SW1
+set_location_assignment PIN_D12 -to SW2
+set_location_assignment PIN_C12 -to SW3
+set_location_assignment PIN_A12 -to SW4
+set_location_assignment PIN_B12 -to SW5
+set_location_assignment PIN_A13 -to SW6
+set_location_assignment PIN_A14 -to SW7
+set_location_assignment PIN_B14 -to SW8
+set_location_assignment PIN_F15 -to SW9
+set_location_assignment PIN_A8 -to LEDR0
+set_location_assignment PIN_A9 -to LEDR1
+set_location_assignment PIN_A10 -to LEDR2
+set_location_assignment PIN_B10 -to LEDR3
+set_location_assignment PIN_D13 -to LEDR4
+set_location_assignment PIN_C13 -to LEDR5
+set_location_assignment PIN_E14 -to LEDR6
+set_location_assignment PIN_D14 -to LEDR7
+set_location_assignment PIN_A11 -to LEDR8
+set_location_assignment PIN_B11 -to LEDR9
+set_location_assignment PIN_C14 -to HEX00
+set_location_assignment PIN_E15 -to HEX01
+set_location_assignment PIN_C15 -to HEX02
+set_location_assignment PIN_C16 -to HEX03
+set_location_assignment PIN_E16 -to HEX04
+set_location_assignment PIN_D17 -to HEX05
+set_location_assignment PIN_C17 -to HEX06
+set_location_assignment PIN_C18 -to HEX10
+set_location_assignment PIN_D18 -to HEX11
+set_location_assignment PIN_E18 -to HEX12
+set_location_assignment PIN_B16 -to HEX13
+set_location_assignment PIN_A17 -to HEX14
+set_location_assignment PIN_A18 -to HEX15
+set_location_assignment PIN_B17 -to HEX16
+set_location_assignment PIN_B20 -to HEX20
+set_location_assignment PIN_A20 -to HEX21
+set_location_assignment PIN_B19 -to HEX22
+set_location_assignment PIN_A21 -to HEX23
+set_location_assignment PIN_B21 -to HEX24
+set_location_assignment PIN_C22 -to HEX25
+set_location_assignment PIN_B22 -to HEX26
+set_location_assignment PIN_F21 -to HEX30
+set_location_assignment PIN_E22 -to HEX31
+set_location_assignment PIN_E21 -to HEX32
+set_location_assignment PIN_C19 -to HEX33
+set_location_assignment PIN_C20 -to HEX34
+set_location_assignment PIN_D19 -to HEX35
+set_location_assignment PIN_E17 -to HEX36
+set_location_assignment PIN_F18 -to HEX40
+set_location_assignment PIN_E20 -to HEX41
+set_location_assignment PIN_E19 -to HEX42
+set_location_assignment PIN_J18 -to HEX43
+set_location_assignment PIN_H19 -to HEX44
+set_location_assignment PIN_F19 -to HEX45
+set_location_assignment PIN_F20 -to HEX46
+set_location_assignment PIN_J20 -to HEX50
+set_location_assignment PIN_K20 -to HEX51
+set_location_assignment PIN_L18 -to HEX52
+set_location_assignment PIN_N18 -to HEX53
+set_location_assignment PIN_M20 -to HEX54
+set_location_assignment PIN_N19 -to HEX55
+set_location_assignment PIN_N20 -to HEX56
+set_location_assignment PIN_AB2 -to KEYR0
+set_location_assignment PIN_AB3 -to KEYR1
+set_location_assignment PIN_AA5 -to KEYR2
+set_location_assignment PIN_AA6 -to KEYR3
+set_location_assignment PIN_Y5 -to KEYC0
+set_location_assignment PIN_Y4 -to KEYC1
+set_location_assignment PIN_Y3 -to KEYC2
+set_location_assignment PIN_AA2 -to KEYC3
+set_location_assignment PIN_AA8 -to DMR0
+set_location_assignment PIN_AA10 -to DMR1
+set_location_assignment PIN_W10 -to DMR2
+set_location_assignment PIN_Y8 -to DMR3
+set_location_assignment PIN_V7 -to DMR4
+set_location_assignment PIN_W9 -to DMR5
+set_location_assignment PIN_V8 -to DMR6
+set_location_assignment PIN_W7 -to DMR7
+set_location_assignment PIN_AB13 -to DMC00
+set_location_assignment PIN_AA14 -to DMC01
+set_location_assignment PIN_W5 -to DMC02
+set_location_assignment PIN_Y11 -to DMC03
+set_location_assignment PIN_W6 -to DMC04
+set_location_assignment PIN_AB12 -to DMC05
+set_location_assignment PIN_W12 -to DMC06
+set_location_assignment PIN_W13 -to DMC07
+set_location_assignment PIN_AB10 -to DMC10
+set_location_assignment PIN_AA15 -to DMC11
+set_location_assignment PIN_V5 -to DMC12
+set_location_assignment PIN_Y7 -to DMC13
+set_location_assignment PIN_W8 -to DMC14
+set_location_assignment PIN_AA9 -to DMC15
+set_location_assignment PIN_AB11 -to DMC16
+set_location_assignment PIN_W11 -to DMC17
+set_location_assignment PIN_AA1 -to VGA_R0
+set_location_assignment PIN_V1 -to VGA_R1
+set_location_assignment PIN_Y2 -to VGA_R2
+set_location_assignment PIN_Y1 -to VGA_R3
+set_location_assignment PIN_W1 -to VGA_G0
+set_location_assignment PIN_T2 -to VGA_G1
+set_location_assignment PIN_R2 -to VGA_G2
+set_location_assignment PIN_R1 -to VGA_G3
+set_location_assignment PIN_P1 -to VGA_B0
+set_location_assignment PIN_T1 -to VGA_B1
+set_location_assignment PIN_P4 -to VGA_B2
+set_location_assignment PIN_N2 -to VGA_B3
+set_location_assignment PIN_N3 -to VGA_HS
+set_location_assignment PIN_N1 -to VGA_VS
+set_global_assignment -name VERILOG_FILE src/symbol_rom.v
+set_global_assignment -name VERILOG_FILE src/slot_machine_v2.v
+set_global_assignment -name VERILOG_FILE src/slot_machine_controller.v
+set_global_assignment -name VERILOG_FILE src/seven_seg_decoder.v
+set_global_assignment -name VERILOG_FILE src/matrix_driver.v
+set_global_assignment -name VERILOG_FILE src/lfsr.v
+set_global_assignment -name VERILOG_FILE src/debounce.v
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

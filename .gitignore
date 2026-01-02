@@ -1,0 +1,22 @@
+# Ignore Quartus compilation databases (Huge & Useless for sharing)
+db/
+incremental_db/
+output_files/
+simulation/
+greybox_tmp/
+
+# Ignore temporary backup files
+*.bak
+*.smsg
+*.qws
+*.ppf
+*.ddb
+*.cmp
+*.sip
+*.spd
+*.bsf
+
+# DO NOT IGNORE these (We need them to run the project!)
+# !*.qpf  <-- Implicitly included if not listed above
+# !*.qsf  <-- Implicitly included if not listed above
+# !*.sof  <-- Keep the compiled bitstream for "Instant Play"
