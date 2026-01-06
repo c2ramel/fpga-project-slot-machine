@@ -6,7 +6,7 @@ A fully functional, casino-style Slot Machine implemented on the **Terasic DE10-
 
 **Want to play without compiling?** Use the pre-compiled bitstream:
 
-1.  **Clone the Repo:**
+1.  **Clone the Repo (or just download the .zip file):**
     ```bash
     git clone https://github.com/c2ramel/fpga-project-slot-machine.git
     ```
