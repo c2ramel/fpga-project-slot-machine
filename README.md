@@ -133,3 +133,12 @@ If you accidentally deleted the `.qsf` settings or created a new project file, y
 2.  Go to **File -> Import**.
 3.  Select `docs/pin_assignments.csv`.
 4.  Recompile the project.
+
+**"The device does not appear in Programmer"**
+If you do not see the device in the Programmer Tool in Quartus: 
+1. Open Device Manager on Windows.
+2. Right click on `USB Blaster` -> `Update Driver`.
+3. Click `Browse my computers for drivers.`
+4. Click `Browse` and select this folder in `C:\intelFPGA_lite\21.1\quartus\drivers\usb-blaster`.
+5. Click `Next` then OK.
+6. USB Blaster should appear in Programmer. 
